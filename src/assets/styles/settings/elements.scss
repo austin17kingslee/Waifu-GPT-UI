@@ -1,0 +1,270 @@
+@include generateSpacingClasses(ml, margin-left);
+@include generateSpacingClasses(mr, margin-right);
+@include generateSpacingClasses(mt, margin-top);
+@include generateSpacingClasses(mb, margin-bottom);
+
+@include generateSpacingClasses(pl, padding-left);
+@include generateSpacingClasses(pr, padding-right);
+@include generateSpacingClasses(pt, padding-top);
+@include generateSpacingClasses(pb, padding-bottom);
+
+@include generateFontSizeClasses(fs, font-size);
+@include generateFontWeightClasses(fw, font-weight);
+
+@include generatePositionClasses(top, top);
+@include generatePositionClasses(bot, bottom);
+
+/** ---NORMALIZED START--- **/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-base;
+  color: $black-1;
+  background-color: $white;
+  margin: 0;
+  font-size: 14px;
+}
+
+input {
+  font-family: $font-base;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+b {
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+/** ---NORMALIZED END--- **/
+
+/** ---MISC START--- **/
+.container {
+  max-width: $container-width;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: initial;
+}
+
+.soft-disabled {
+  opacity: 0.8;
+  pointer-events: none;
+  cursor: initial;
+}
+
+.unclickable {
+  pointer-events: none;
+  cursor: initial;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.hidden-body {
+  overflow: hidden;
+  margin-right: 8px;
+
+  @media screen and (max-width: $breakpoint-900) {
+    margin-right: 0;
+  }
+}
+
+.circle-loading {
+  width: 18px;
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+}
+/** ---MISC END--- **/
+
+/** ---ANIMATION START--- **/
+.slide-up {
+  animation: slide-up 0.3s forwards;
+}
+
+.slide-up-slow {
+  animation: slide-up-slow 0.4s forwards;
+}
+
+.fade-in {
+  animation: fade-in 0.3s forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.3s forwards;
+}
+/** ---ANIMATION END--- **/
+
+/** ---TEXT START--- **/
+.capitalize {
+  display: inline-block;
+  text-transform: lowercase;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.error-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: $red;
+  margin: 5px 0;
+  animation: slide-up 0.3s forwards;
+
+  &--no-animation {
+    animation: none;
+  }
+}
+
+.success-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: $aqua;
+  margin: 5px 0;
+  animation: slide-up 0.3s forwards;
+
+  &--no-animation {
+    animation: none;
+  }
+}
+
+.warning-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: $yellow;
+  margin: 5px 0;
+  animation: slide-up 0.3s forwards;
+
+  &--no-animation {
+    animation: none;
+  }
+}
+/** ---TEXT END--- **/
+
+/** ---FLEX START--- **/
+.flex {
+  display: flex;
+}
+
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-start-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flex-center-start {
+  display: flex;
+  align-items: center;
+}
+
+.flex-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flex-center-end {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.flex-end-none {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-start-none {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column-center-none {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/** ---FLEX END--- **/

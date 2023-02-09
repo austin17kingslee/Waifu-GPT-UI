@@ -1,0 +1,43 @@
+/* ============ Settings ============ */
+$container-width: 1200px;
+$image-path: '~src/assets/images/';
+
+/* ============ Fonts ============ */
+$font-base: 'Montserrat', sans-serif;
+
+/* ============ Colors ============ */
+$white: white;
+$black: #2a2935;
+$black-1: #333333;
+$yellow: #ffc904;
+$orange: #ff9900;
+$gray: #ababab;
+$red: #ef574c;
+$aqua: aquamarine;
+
+/* ============ Gradients ============ */
+$gradient-1: linear-gradient(140deg, #1EE2CC, #1FC0E1);
+$gradient-2: linear-gradient(140deg, #ff85b2, #ff91dd);
+$gradient-3: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+$gradient-4: linear-gradient(140deg, #ff91dd, #2d73db);
+$gradient-5: linear-gradient(135deg, rgba(0, 255, 170, 1.0) 0%, rgba(0, 187, 255, 1.0) 53%, rgba(69, 121, 245, 1.0) 100%);
+$gradient-6: linear-gradient(160deg, #00f2cd, #0074b3);
+$gradient-7: linear-gradient(170deg, #ffb046, #f52880);
+
+/* ============ Box Shadows ============ */
+$bs-1: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$bs-2: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 9px 9px 2px rgba(0, 0, 0, 0.14), 0px 5px 9px 4px rgba(0, 0, 0, 0.12);
+$bs-3: 0 2px 2px -4px rgba(0, 0, 0, .2), 0 5px 9px 2px rgba(0, 0, 0, .14), 0 5px 7px 4px rgba(0, 0, 0, .12);
+$bs-4: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+/* ============ Breakpoints ============ */
+$breakpoint-1300: 1300px;
+$breakpoint-1200: 1200px;
+$breakpoint-1100: 1100px;
+$breakpoint-1000: 1000px;
+$breakpoint-900: 900px;
+$breakpoint-800: 800px;
+$breakpoint-700: 700px;
+$breakpoint-600: 600px;
+$breakpoint-500: 500px;
+$breakpoint-400: 400px;

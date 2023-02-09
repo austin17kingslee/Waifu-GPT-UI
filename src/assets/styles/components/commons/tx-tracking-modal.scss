@@ -1,0 +1,35 @@
+.tx-tracking {
+  &__content {
+    text-align: center;
+    margin-bottom: 20px;
+
+    div:first-child {
+      font-size: 14px;
+      color: $gray;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__hash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $black;
+    padding: 14px;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: $breakpoint-500) {
+    &__hash {
+      flex-direction: column;
+
+      > div:first-child {
+        margin-bottom: 10px;
+      }
+
+      > div:last-child {
+        font-size: 12px;
+      }
+    }
+  }
+}

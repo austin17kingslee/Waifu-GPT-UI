@@ -1,0 +1,57 @@
+.create {
+  background: url($image-path + 'website/bg.png') center no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+  display: flex;
+  align-items: end;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1920/314;
+    left: 0
+  }
+
+  &::before {
+    top: 0;
+    background-position: 0 -100px;
+    background-image: url($image-path + "website/wavy-1.png");
+  }
+
+  &::after {
+    bottom: 0;
+    background-position: 0 100px;
+    background-image: url($image-path + "website/wavy-2.png");
+  }
+
+  &__container {
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__waifu {
+    width: 55%;
+    position: relative;
+    right: 50px;
+  }
+
+  &__create {
+    width: 45%;
+  }
+}
+
+.roadmap {
+  padding-bottom: 100px;
+  background: url($image-path + 'website/roadmap-bg.png') center no-repeat;
+  background-size: cover;
+}
+
+.token {
+  text-align: center;
+}
