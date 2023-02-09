@@ -4,7 +4,7 @@
   position: relative;
   height: 800px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 
   &::before,
   &::after {
@@ -46,12 +46,313 @@
   }
 }
 
+.care {
+  position: relative;
+  bottom: 122px;
+  z-index: 1;
+}
+
+.there {
+  position: relative;
+  bottom: 152px;
+  z-index: 2;
+
+  &__content {
+    position: relative;
+    bottom: 150px;
+    padding: 0 80px;
+  }
+
+  &__column {
+    text-align: center;
+  }
+
+  &__icon {
+    max-width: 260px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.prompt {
+  position: relative;
+  bottom: 280px;
+
+  &__waifu {
+    width: 40%;
+  }
+
+  &__content {
+    width: 60%;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 50px 0;
+  }
+}
+
 .roadmap {
-  padding-bottom: 100px;
+  position: relative;
+  bottom: 280px;
+  padding-bottom: 170px;
   background: url($image-path + 'website/roadmap-bg.png') center no-repeat;
   background-size: cover;
+
+  &__title {
+    margin-bottom: 50px;
+    width: 600px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  &__content {
+    padding: 0 50px;
+  }
 }
 
 .token {
+  position: relative;
   text-align: center;
+  margin-top: -400px;
+  padding-bottom: 100px;
+
+  &__icon {
+    max-width: 300px;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 25px 0 10px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 150px;
+  }
+}
+
+.social {
+  margin-top: 30px;
+
+  &__bg {
+    background: url($image-path + 'website/social-bg.png') center no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+
+  &__icon {
+    width: 35px;
+    position: relative;
+    bottom: 1px;
+    transition: all;
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-1000) {
+  .create {
+    height: 500px;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .care {
+    bottom: 0;
+  }
+
+  .there {
+    bottom: 0;
+
+    &__content {
+      display: block;
+      bottom: 100px;
+      padding: 0;
+    }
+
+    &__column {
+      width: 100%;
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon {
+      width: 200px;
+    }
+
+    &__desc {
+      width: 100%;
+      max-width: 400px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+  }
+
+  .prompt {
+    bottom: 0;
+
+    &__text {
+      font-size: 14px;
+      padding: 15px 20px 20px;
+    }
+  }
+
+  .roadmap {
+    bottom: 0;
+
+    &__title {
+      width: 300px;
+    }
+  }
+
+  .token {
+    margin-top: -100px;
+
+    &__icon {
+      max-width: 200px;
+    }
+
+    &__text {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-600) {
+  .create {
+    height: 300px;
+
+    &__waifu {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &__create {
+      width: auto;
+      height: auto;
+      max-height: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .care {
+    margin-bottom: 30px;
+
+    .column-6 {
+      width: 100%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .there {
+    &__content {
+      bottom: 40px;
+    }
+
+    &__column {
+      margin-bottom: 30px;
+    }
+
+    &__icon {
+      width: 100px;
+    }
+
+    &__title {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  .prompt {
+    padding-bottom: 60px;
+
+    &__waifu {
+      display: none;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__text {
+      padding: 15px 0 0;
+    }
+  }
+
+  .roadmap {
+    &__title {
+      margin-bottom: 10px;
+      bottom: 10px;
+    }
+
+    &__content {
+      display: block;
+      padding: 0 20px;
+    }
+
+    .column-4 {
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .token {
+    &__title {
+      margin: 10px 0 10px;
+    }
+
+    &__text {
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+
+  .social {
+    &__icon {
+      width: 28px;
+    }
+  }
 }

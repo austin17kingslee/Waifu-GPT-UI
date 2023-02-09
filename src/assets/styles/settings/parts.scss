@@ -261,5 +261,9 @@
 
 .star {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
+
+  @media screen and (max-width: $breakpoint-1000) {
+    display: none;
+  }
 }

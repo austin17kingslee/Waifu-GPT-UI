@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "src/assets/images/website/logo.png";
+import comingSoon from "src/assets/images/website/coming soon.svg";
 import { registerModal } from "src/app/redux/global/globalSlice";
 import { MODAL_KEY } from "src/app/configs/constants";
 import { useDispatch } from "react-redux";
@@ -10,8 +11,9 @@ export default function Header() {
   function openCreateWaifuModal() {
     dispatch(registerModal({
       key: MODAL_KEY.CREATE_WAIFU,
-      title: "Create your Waifu",
-      content: <div>Coming Soon</div>
+      hidePanel: true,
+      hideXBtn: true,
+      content: <img src={comingSoon} alt="comingSoon" />
     }));
   }
 
