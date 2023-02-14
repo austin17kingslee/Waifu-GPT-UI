@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ROUTE } from "src/app/configs/constants";
 import ErrorPage from "src/app/components/Commons/ErrorPage/ErrorPage";
-import Header from "src/app/components/Layout/Header";
 import Home from "src/app/components/Home/Home";
 import GlobalModals from "src/app/components/Commons/Modals/GlobalModals";
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -15,7 +14,6 @@ export default function App() {
     <div className="app">
       <ParallaxProvider>
         <ErrorPage>
-            <Header/>
             <BrowserRouter>
               <Routes>
                 <Route path={ROUTE.HOME} element={<Home/>} />

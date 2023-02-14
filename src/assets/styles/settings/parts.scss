@@ -1,7 +1,7 @@
 .nice-scroll {
   /* width */
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
 
   /* Track */
@@ -11,12 +11,13 @@
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $aqua;
+    background: #ff91dd;
+    border-radius: 10px;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: $aqua;
+    background: #ff91dd;
   }
 
   &--small {
@@ -237,6 +238,7 @@
   color: #3E2330;
   font-size: 22px;
   font-weight: bold;
+  border: 2px solid;
   border-radius: 30px;
   background-color: #FDE98F;
   margin: 0 auto;

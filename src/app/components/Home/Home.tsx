@@ -18,10 +18,40 @@ import FloatingStar from "src/app/components/Commons/FloatingStar";
 import twitterIcon from "src/assets/images/website/social-twitter.png";
 import telegramIcon from "src/assets/images/website/social-telegram.png";
 import logo from "src/assets/images/website/logo.png";
+import pricingTable from "src/assets/images/website/pricing-table.png";
+import arbiscan from "src/assets/images/website/arbiscan.png";
+import uniswap from "src/assets/images/website/uniswap.png";
+import dextools from "src/assets/images/website/dextools.png";
+import { useDispatch } from "react-redux";
+import { registerModal } from "src/app/redux/global/globalSlice";
+import { MODAL_KEY } from "src/app/configs/constants";
+import comingSoon from "src/assets/images/website/coming soon.svg";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
+  function openCreateWaifuModal() {
+    dispatch(registerModal({
+      key: MODAL_KEY.CREATE_WAIFU,
+      hidePanel: true,
+      hideXBtn: true,
+      content: <img src={comingSoon} alt="comingSoon" />
+    }));
+  }
+
   return (
     <div className="home">
+      <div className="container">
+        <div className="header flex-center-between">
+          <img className="header__logo" src={logo} alt="logo" />
+          <div className="flex header__links">
+            <a className="header__link" href="#feature">Feature</a>
+            <a className="header__link" href="#roadmap">Roadmap</a>
+            <div className="btn-2" onClick={openCreateWaifuModal}>Create Waifu</div>
+          </div>
+        </div>
+      </div>
+
       <div className="create">
         <div className="container create__container flex-center-between">
           <img className="create__waifu" src={waifu1} alt="waifu1" />
@@ -92,11 +122,9 @@ export default function Home() {
       <div className="token">
         <div className="container token__container">
           <FloatingStar speed={-7} style={{ width: 50, left: 0, top: 250 }} />
-          <FloatingStar speed={-7} style={{ width: 50, right: 0, top: 250 }} />
-          <FloatingStar speed={-7} style={{ width: 30, left: 150, top: 200 }} />
-          <FloatingStar speed={-7} style={{ width: 30, right: 150, top: 200 }} />
-          <FloatingStar speed={-7} style={{ width: 25, left: 100, top: 630 }} />
-          <FloatingStar speed={-7} style={{ width: 25, right: 100, top: 630 }} />
+          <FloatingStar speed={6} style={{ width: 50, right: 0, top: 250 }} />
+          <FloatingStar speed={1} style={{ width: 30, left: 150, top: 200 }} />
+          <FloatingStar speed={-4} style={{ width: 30, right: 150, top: 200 }} />
           <img className="token__icon" src={waifuToken} alt="waifuToken" />
           <div className="token__title">WGPT TOKEN</div>
           <div className="token__text">
@@ -105,19 +133,78 @@ export default function Home() {
             for users. By holding WGPT Tokens, you can access premium features, unlock new functionality, and participate in
             the growth of our ecosystem. Join us on the cutting edge of AI technology and become a part of the future with WGPT Token.
           </div>
-          <div className="social">
-            <div className="social__bg">
+          <div className="fs-4 mt-2 mb-4"><b>Official Contract on Arbitrum One:</b> <i className="fw-3 fs-3">TBD</i></div>
+          <div className="flex-center-center token__check">
+            <div className="mr-5 fs-4 fw-4 top-4">CHECK US ON</div>
+            <div>
               <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
-                <img className="social__icon mr-2" src={twitterIcon} alt="twitterIcon" />
+                <img className="mr-4" style={{width: 150}} src={uniswap} alt="uniswap" />
               </a>
               <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
-                <img className="social__icon" src={telegramIcon} alt="telegramIcon" />
+                <img className="mr-4 top-2" style={{ width: 110 }} src={dextools} alt="dextools" />
+              </a>
+              <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+                <img className="top-4" style={{ width: 180 }} src={arbiscan} alt="arbiscan" />
               </a>
             </div>
           </div>
-          <img className="token__logo" src={logo} alt="logo" />
         </div>
       </div>
+
+      <div className="pricing container">
+        <FloatingStar speed={-7} style={{ width: 50, left: 0, top: 20 }} />
+        <FloatingStar speed={2} style={{ width: 25, top: "80%", left: 420 }} />
+        <FloatingStar speed={5} style={{ width: 35, top: "50%", right: 0 }} />
+        <div className="pricing__title">Pricing</div>
+        <div className="pricing__table">
+          <div className="pricing__block">
+            <img src={pricingTable} alt="pricingTable" />
+            <div className="pricing__package">Trial</div>
+            <div className="pricing__content">
+              <div>Using For</div>
+              <div className="pricing__price">Free</div>
+              <div className="pricing__text">5 requests per day</div>
+              <div className="pricing__button btn-2" onClick={openCreateWaifuModal}>Activate</div>
+            </div>
+          </div>
+          <div className="pricing__block">
+            <img src={pricingTable} alt="pricingTable" />
+            <div className="pricing__package">Standard</div>
+            <div className="pricing__content">
+              <div>From</div>
+              <div className="pricing__price">1000 WGPT</div>
+              <div className="pricing__text">Unlimited requests for a month</div>
+              <div className="pricing__text">Fast response times</div>
+              <div className="pricing__button btn-2" onClick={openCreateWaifuModal}>Activate</div>
+            </div>
+          </div>
+          <div className="pricing__block">
+            <img src={pricingTable} alt="pricingTable" />
+            <div className="pricing__package">Pro</div>
+            <div className="pricing__content">
+              <div>From</div>
+              <div className="pricing__price">10,000 WGPT</div>
+              <div className="pricing__text">Unlimited requests for a lifetime</div>
+              <div className="pricing__text">Faster response times</div>
+              <div className="pricing__text">Priority access to beta features</div>
+              <div className="pricing__button btn-2" onClick={openCreateWaifuModal}>Activate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="social">
+        <div className="social__bg">
+          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+            <img className="social__icon mr-2" src={twitterIcon} alt="twitterIcon" />
+          </a>
+          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+            <img className="social__icon" src={telegramIcon} alt="telegramIcon" />
+          </a>
+        </div>
+        <img className="token__logo" src={logo} alt="logo" />
+      </div>
+
     </div>
   );
 }
