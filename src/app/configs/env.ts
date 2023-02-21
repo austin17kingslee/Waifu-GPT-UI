@@ -19,60 +19,18 @@ export const NETWORKS: {[key: number]: Network} = {
     contract: {},
     api: {}
   },
-  3: {
-    id: 3,
-    name: "Ropsten",
+  42161: {
+    id: 42161,
+    name: "Arbitrum One",
     symbol: "ETH",
     decimals: 18,
-    defaultGasPrice: 5,
+    defaultGasPrice: 0.1,
     timeout: 5000,
-    explorer: 'https://ropsten.etherscan.io/',
+    explorer: 'https://arbiscan.io/',
     nodes: [
-      "https://ropsten.infura.io/v3/fb69eb42745f4551952a762e7b10f646"
+      "https://arb1.arbitrum.io/rpc"
     ],
     contract: {},
     api: {}
   },
-  56: {
-    id: 56,
-    name: "BNB Chain",
-    symbol: "BNB",
-    decimals: 18,
-    defaultGasPrice: 5,
-    timeout: 5000,
-    explorer: 'https://bscscan.com/',
-    nodes: [
-      "https://bsc-dataseed.binance.org/"
-    ],
-    contract: {},
-    api: {}
-  },
-  137: {
-    id: 137,
-    name: "Polygon",
-    symbol: "MATIC",
-    decimals: 18,
-    defaultGasPrice: 5,
-    timeout: 5000,
-    explorer: 'https://polygonscan.com/',
-    nodes: [
-      "https://polygon-rpc.com/"
-    ],
-    contract: {},
-    api: {}
-  },
-  43114: {
-    id: 43114,
-    name: "Avalanche Network",
-    symbol: "AVAX",
-    decimals: 18,
-    defaultGasPrice: 5,
-    timeout: 5000,
-    explorer: 'https://snowtrace.io/',
-    nodes: [
-      "https://api.avax.network/ext/bc/C/rpc/"
-    ],
-    contract: {},
-    api: {}
-  }
 };

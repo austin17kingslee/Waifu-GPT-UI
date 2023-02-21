@@ -15,7 +15,7 @@
     background-size: cover;
     width: 100%;
     aspect-ratio: 1920/314;
-    left: 0
+    left: 0;
   }
 
   &::before {
@@ -26,6 +26,7 @@
 
   &::after {
     bottom: 0;
+    z-index: 1;
     background-position: 0 100px;
     background-image: url($image-path + "website/wavy-2.png");
   }
@@ -126,7 +127,7 @@
   position: relative;
   text-align: center;
   margin-top: -400px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 
   &__icon {
     max-width: 300px;
@@ -151,7 +152,7 @@
 }
 
 .pricing {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   &__title {
     width: 100%;
@@ -352,15 +353,11 @@
 
 @media screen and (max-width: $breakpoint-700) {
   .token {
-    padding-bottom: 30px;
-
-    &__check {
-     display: none;
-    }
+    padding-bottom: 20px;
   }
 
   .pricing {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 
     &__title {
       font-size: 25px;
@@ -375,30 +372,10 @@
       width: 100%;
       margin: 0 auto 50px;
     }
+  }
 
-    img {
-
-    }
-
-    &__package {
-
-    }
-
-    &__content {
-
-    }
-
-    &__price {
-
-    }
-
-    &__text {
-
-    }
-
-    &__button {
-
-    }
+  .check {
+    display: none;
   }
 }
 

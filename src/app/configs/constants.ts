@@ -32,4 +32,5 @@ export const INTERVAL = {
   PENDING_TX: 3000,
 };
 
+export const DEFAULT_CHAIN_ID = 42161;
 export const MOBILE_SCREEN_SIZE = 700;

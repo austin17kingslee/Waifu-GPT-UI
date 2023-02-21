@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { REHYDRATE } from "redux-persist/lib/constants";
 import { initiateWalletService } from "src/app/utils/helpers";
+import { DEFAULT_CHAIN_ID } from "src/app/configs/constants";
 
 interface AccountData {
   address: string,
@@ -13,7 +14,7 @@ interface AccountState extends AccountData {
 }
 
 const initialState: AccountState = {
-  chainId: 1,
+  chainId: DEFAULT_CHAIN_ID,
   address: '',
   type: '',
   wallet: null,

@@ -19,6 +19,7 @@ import twitterIcon from "src/assets/images/website/social-twitter.png";
 import telegramIcon from "src/assets/images/website/social-telegram.png";
 import logo from "src/assets/images/website/logo.png";
 import pricingTable from "src/assets/images/website/pricing-table.png";
+import gallery from "src/assets/images/website/waifu-gallery.png";
 import arbiscan from "src/assets/images/website/arbiscan.png";
 import uniswap from "src/assets/images/website/uniswap.png";
 import dextools from "src/assets/images/website/dextools.png";
@@ -134,20 +135,6 @@ export default function Home() {
             the growth of our ecosystem. Join us on the cutting edge of AI technology and become a part of the future with WGPT Token.
           </div>
           <div className="fs-4 mt-2 mb-4"><b>Official Contract on Arbitrum One:</b> <i className="fw-3 fs-3">TBD</i></div>
-          <div className="flex-center-center token__check">
-            <div className="mr-5 fs-4 fw-4 top-4">CHECK US ON</div>
-            <div>
-              <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
-                <img className="mr-4" style={{width: 150}} src={uniswap} alt="uniswap" />
-              </a>
-              <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
-                <img className="mr-4 top-2" style={{ width: 110 }} src={dextools} alt="dextools" />
-              </a>
-              <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
-                <img className="top-4" style={{ width: 180 }} src={arbiscan} alt="arbiscan" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -193,6 +180,25 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="container mb-10">
+        <img src={gallery} alt="gallery" />
+      </div>
+
+      <div className="flex-center-center check">
+        <div className="mr-5 fs-4 fw-4 top-4">CHECK US ON</div>
+        <div>
+          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+            <img className="mr-4" style={{ width: 150 }} src={uniswap} alt="uniswap" />
+          </a>
+          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+            <img className="mr-4 top-2" style={{ width: 110 }} src={dextools} alt="dextools" />
+          </a>
+          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+            <img className="top-3" style={{ width: 180 }} src={arbiscan} alt="arbiscan" />
+          </a>
+        </div>
+      </div>
+
       <div className="social">
         <div className="social__bg">
           <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
@@ -204,7 +210,6 @@ export default function Home() {
         </div>
         <img className="token__logo" src={logo} alt="logo" />
       </div>
-
     </div>
   );
 }
