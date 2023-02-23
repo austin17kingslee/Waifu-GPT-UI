@@ -6,6 +6,7 @@ import promptHeader from 'src/assets/images/website/prompt-header.png';
 import { useDispatch } from "react-redux";
 import { registerModal } from "src/app/redux/global/globalSlice";
 import { MODAL_KEY } from "src/app/configs/constants";
+import Footer from '../Footer/Index';
 
 export default function Summon() {
   const dispatch = useDispatch();
@@ -63,7 +64,7 @@ export default function Summon() {
                   className="nice-scroll"
                   onFocus={handleFocus}
                   onChange={handleChangePrompt}
-                  rows={12}
+                  // rows={12}
                   value={promptText}
                 />
               </div>
@@ -75,18 +76,7 @@ export default function Summon() {
         </div>
       </div>
 
-      {/* <div className="prompt">
-        <div className="container flex-center-between">
-          <FloatingStar speed={-7} style={{ width: 50, left: 0, top: 20 }} />
-          <FloatingStar speed={2} style={{ width: 25, top: "70%", left: 490 }} />
-          <FloatingStar speed={5} style={{ width: 35, top: "50%", right: 0 }} />
-          <img className="prompt__waifu" src={waifu3} alt="waifu3" />
-          <div className="prompt__content">
-            <img className="prompt__image" src={waifuPrompt} alt="waifuPrompt" />
-            <div className="prompt__text">AI companion allowing you to fully customize your virtual anime girl. From her appearance to her personality, you have complete control over every aspect of your anime companion.</div>
-          </div>
-        </div>
-      </div> */}
+      <Footer />
     </div>
   );
 }

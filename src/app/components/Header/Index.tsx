@@ -2,7 +2,7 @@ import React from "react";
 import logo from "src/assets/images/website/logo.png";
 import { Link } from 'react-router-dom';
 
-export default function Summon() {
+export default function Header() {
   return (
     <div className="header">
       <div className="container">
