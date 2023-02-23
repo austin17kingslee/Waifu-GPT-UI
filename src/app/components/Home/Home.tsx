@@ -1,4 +1,7 @@
 import React from "react";
+
+import Header from '../Header/Index';
+
 import waifu1 from "src/assets/images/website/waifu-1.png";
 import waifu2 from "src/assets/images/website/waifu-2.png";
 import waifu3 from "src/assets/images/website/waifu-3.png";
@@ -23,41 +26,34 @@ import gallery from "src/assets/images/website/waifu-gallery.png";
 import arbiscan from "src/assets/images/website/arbiscan.png";
 import uniswap from "src/assets/images/website/uniswap.png";
 import dextools from "src/assets/images/website/dextools.png";
-import { useDispatch } from "react-redux";
-import { registerModal } from "src/app/redux/global/globalSlice";
-import { MODAL_KEY } from "src/app/configs/constants";
-import comingSoon from "src/assets/images/website/coming soon.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function openCreateWaifuModal() {
-    dispatch(registerModal({
-      key: MODAL_KEY.CREATE_WAIFU,
-      hidePanel: true,
-      hideXBtn: true,
-      content: <img src={comingSoon} alt="comingSoon" />
-    }));
+    navigate('/summon');
+    // dispatch(registerModal({
+    //   key: MODAL_KEY.CREATE_WAIFU,
+    //   hidePanel: true,
+    //   hideXBtn: true,
+    //   content: <img src={comingSoon} alt="comingSoon" />
+    // }));
   }
 
   return (
     <div className="home">
-      <div className="container">
-        <div className="header flex-center-between">
-          <img className="header__logo" src={logo} alt="logo" />
-          <div className="flex header__links">
-            <a className="header__link" href="#feature">Feature</a>
-            <a className="header__link" href="#roadmap">Roadmap</a>
-            <div className="btn-2" onClick={openCreateWaifuModal}>Create Waifu</div>
-          </div>
-        </div>
-      </div>
+      <Header />
 
       <div className="create">
         <div className="container create__container flex-center-between">
           <img className="create__waifu" src={waifu1} alt="waifu1" />
           <img className="create__create" src={waifuCreate} alt="waifuCreate" />
         </div>
+      </div>
+
+      <div className="create create__mobile">
+        <img className="create__mobile__img" src={waifu1} alt="waifu1" />
       </div>
 
       <div className="care">

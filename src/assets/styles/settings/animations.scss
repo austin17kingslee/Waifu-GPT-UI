@@ -95,3 +95,19 @@
     transform: translateY(0);
   }
 }
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  animation: fade-in 1000ms ease;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  animation: fade-out 1000ms ease;
+}

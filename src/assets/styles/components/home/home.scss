@@ -45,6 +45,13 @@
   &__create {
     width: 45%;
   }
+
+  &__mobile {
+    display: none;
+    &__img {
+      max-height: 100%;
+    }
+  }
 }
 
 .care {
@@ -382,15 +389,13 @@
 @media screen and (max-width: $breakpoint-600) {
   .create {
     height: 300px;
-
+    &__mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     &__waifu {
-      width: auto;
-      height: 100%;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      z-index: -1;
+      display: none;
     }
 
     &__create {

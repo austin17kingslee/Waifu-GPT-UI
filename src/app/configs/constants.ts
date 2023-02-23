@@ -1,6 +1,7 @@
 export const ROUTE = {
   HOME: "/",
   COLLECTIONS: "collections/*",
+  SUMMON: "/summon",
 };
 
 export const WALLET_TYPE = {
@@ -26,6 +27,7 @@ export const MODAL_KEY = {
   IMPORT_WALLET: "IMPORT_WALLET",
   CUBE_LOADING: "CUBE_LOADING",
   CREATE_WAIFU: "CREATE_WAIFU",
+  WAIFU_IMG: "WAIFU_IMG",
 }
 
 export const INTERVAL = {
