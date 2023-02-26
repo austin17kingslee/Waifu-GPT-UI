@@ -1,7 +1,5 @@
 import React from "react";
-
 import Header from '../Header/Index';
-
 import waifu1 from "src/assets/images/website/waifu-1.png";
 import waifu2 from "src/assets/images/website/waifu-2.png";
 import waifu3 from "src/assets/images/website/waifu-3.png";
@@ -16,7 +14,7 @@ import roadmapTitle from "src/assets/images/website/roadmap-title.png";
 import roadmapPhase1 from "src/assets/images/website/roadmap-phase-1.png";
 import roadmapPhase2 from "src/assets/images/website/roadmap-phase-2.png";
 import roadmapPhase3 from "src/assets/images/website/roadmap-phase-3.png";
-import waifuToken from "src/assets/images/website/waifu-token.png";
+// import waifuToken from "src/assets/images/website/waifu-token.png";
 import FloatingStar from "src/app/components/Commons/FloatingStar";
 import pricingTable from "src/assets/images/website/pricing-table.png";
 import gallery from "src/assets/images/website/waifu-gallery.png";
@@ -111,7 +109,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="token">
+      {/*<div className="token">
         <div className="container token__container">
           <FloatingStar speed={-7} style={{ width: 50, left: 0, top: 250 }} />
           <FloatingStar speed={6} style={{ width: 50, right: 0, top: 250 }} />
@@ -127,7 +125,7 @@ export default function Home() {
           </div>
           <div className="fs-4 mt-2 mb-4"><b>Official Contract on Arbitrum One:</b> <i className="fw-3 fs-3">TBD</i></div>
         </div>
-      </div>
+      </div>*/}
 
       <div className="pricing container">
         <FloatingStar speed={-7} style={{ width: 50, left: 0, top: 20 }} />
@@ -150,7 +148,7 @@ export default function Home() {
             <div className="pricing__package">Standard</div>
             <div className="pricing__content">
               <div>From</div>
-              <div className="pricing__price">1000 WGPT</div>
+              <div className="pricing__price">10$</div>
               <div className="pricing__text">Unlimited requests for a month</div>
               <div className="pricing__text">Fast response times</div>
               <div className="pricing__button btn-2" onClick={openCreateWaifuModal}>Activate</div>
@@ -161,7 +159,7 @@ export default function Home() {
             <div className="pricing__package">Pro</div>
             <div className="pricing__content">
               <div>From</div>
-              <div className="pricing__price">10,000 WGPT</div>
+              <div className="pricing__price">50$</div>
               <div className="pricing__text">Unlimited requests for a lifetime</div>
               <div className="pricing__text">Faster response times</div>
               <div className="pricing__text">Priority access to beta features</div>
