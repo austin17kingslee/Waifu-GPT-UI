@@ -5,14 +5,17 @@ import waifuCenter from 'src/assets/images/website/waifu-center.png';
 import promptHeader from 'src/assets/images/website/prompt-header.png';
 import { useDispatch } from "react-redux";
 import { registerModal } from "src/app/redux/global/globalSlice";
-import { MODAL_KEY } from "src/app/configs/constants";
+import { MODAL_KEY, WAIFU_COMMANDS } from "src/app/configs/constants";
 import Footer from '../Footer/Index';
+import { getPromtString } from 'src/app/utils/helpers';
+import { fetchWaifuImg } from 'src/app/services/api/waifuService';
 
 export default function Summon() {
   const dispatch = useDispatch();
 
   const [waifuImg, setWaifuImg] = useState(waifuCenter);
   const [promptText, setPromptText] = useState('/waifu ');
+  const [infoText, setInfoText] = useState('Hi Master, please enter Prompt and start summon your waifu.');
 
   function openWaifuImgModal() {
     dispatch(registerModal({
@@ -38,8 +41,21 @@ export default function Summon() {
     setPromptText(e.target.value);
   }
 
-  function summon() {
-    //
+  
+
+  async function summon() {
+    // handle post promt to server
+    console.log("++++++ promt", promptText)
+    const promtObj = getPromtString(promptText, WAIFU_COMMANDS.WAIFU)
+    if (promtObj.err){
+      return setInfoText(`Sorry I can't understand you! Command needs to follow this format:`)
+    }
+    const promtString = promtObj.promt
+    const imageObj = await fetchWaifuImg(promtString)
+    if (imageObj.err){
+      return setInfoText(imageObj.err.toString())
+    }
+    setWaifuImg(imageObj.src)
   }
 
   return (
@@ -54,7 +70,7 @@ export default function Summon() {
               <img className="absolute summon__waifu-center" src={waifuImg} alt="your waifu" onClick={openWaifuImgModal} />
             </div>
             <div className="summon__instruction">
-              <p>Hi Master, please enter Prompt and start summon your waifu.</p>
+              <p>{infoText}</p>
               <p>/waifu[space]word_1,word_2,...,word_n</p>
             </div>
             <div className="summon__prompt-block">

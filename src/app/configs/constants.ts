@@ -36,3 +36,8 @@ export const INTERVAL = {
 
 export const DEFAULT_CHAIN_ID = 42161;
 export const MOBILE_SCREEN_SIZE = 700;
+
+export const WAIFU_COMMANDS = {
+  WAIFU: '/waifu',
+  HOTWAIFU: '/hotwaifu'
+} 

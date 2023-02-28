@@ -2,6 +2,7 @@ import { Network } from "src/app/types/types";
 
 export const API = {
   COINGECKO: 'https://api.coingecko.com/api/v3',
+  WAIFU_API: 'https://service.waifugpt.com'
 }
 
 export const NETWORKS: {[key: number]: Network} = {

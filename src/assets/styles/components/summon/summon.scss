@@ -103,9 +103,11 @@
   }
 
   &__waifu-center {
-    width: 26%;
+    width: 33%;
     left: 50%;
-    top: 52%;
+    top: 57%;
     transform: translate(-50%,-50%);
+    border: white 5px solid;
+    border-radius: 10px;
   }
 }

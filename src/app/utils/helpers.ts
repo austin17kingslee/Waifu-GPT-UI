@@ -1,4 +1,4 @@
-import { WALLET_TYPE } from "src/app/configs/constants";
+import { WALLET_TYPE, WAIFU_COMMANDS } from "src/app/configs/constants";
 import MetamaskService from "src/app/services/accounts/MetamaskService";
 import WalletConnectService from "src/app/services/accounts/WalletConnectService";
 import DappService from "src/app/services/accounts/DappService";
@@ -217,4 +217,21 @@ export function isEmptyHistory(history: any) {
 
 export function onBackClicked(history: any) {
   history.goBack();
+}
+
+
+export function getPromtString(text: string, cmd: string) {
+  const command = text.substring(0, cmd.length);
+  if (command !== cmd) {
+    return {
+      promt: '',
+      err: `Sorry I can't understand you! Command needs to follow this format: /${cmd}[space]word_1,word_2,...,word_n`
+    }
+  }
+  const words = text.substring(cmd.length).split(',');
+  const promptString = words.join(',');
+  return {
+    promt: promptString,
+    err: null
+  };
 }
