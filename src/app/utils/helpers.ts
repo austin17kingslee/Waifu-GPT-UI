@@ -1,4 +1,4 @@
-import { WALLET_TYPE, WAIFU_COMMANDS } from "src/app/configs/constants";
+import { WALLET_TYPE } from "src/app/configs/constants";
 import MetamaskService from "src/app/services/accounts/MetamaskService";
 import WalletConnectService from "src/app/services/accounts/WalletConnectService";
 import DappService from "src/app/services/accounts/DappService";
