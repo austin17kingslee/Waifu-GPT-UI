@@ -9,7 +9,7 @@ import telegramIcon from "src/assets/images/website/social-telegram.png";
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="flex-center-center check">
+      {/* <div className="flex-center-center check">
         <div className="mr-5 fs-4 fw-4 top-4">CHECK US ON</div>
         <div>
           <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
@@ -22,14 +22,14 @@ export default function Footer() {
             <img className="top-3" style={{ width: 180 }} src={arbiscan} alt="arbiscan" />
           </a>
         </div>
-      </div>
+      </div> */}
 
       <div className="social">
         <div className="social__bg">
-          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+          <a href="https://twitter.com/waifugpt" target="_blank" rel="noreferrer noopener">
             <img className="social__icon mr-2" src={twitterIcon} alt="twitterIcon" />
           </a>
-          <a href="https://waifugpt.com/" target="_blank" rel="noreferrer noopener">
+          <a href="https://t.me/waifugpt" target="_blank" rel="noreferrer noopener">
             <img className="social__icon" src={telegramIcon} alt="telegramIcon" />
           </a>
         </div>
