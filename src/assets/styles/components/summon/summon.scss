@@ -111,3 +111,12 @@
     border-radius: 10px;
   }
 }
+
+@media screen and (max-width: $breakpoint-600) {
+  .summon {
+    &__waifu-placeholder {
+      width: 70%
+    }
+  }
+
+}

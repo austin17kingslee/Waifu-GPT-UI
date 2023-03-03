@@ -81,8 +81,7 @@ export default function Summon() {
               {/* <img className="absolute summon__waifu-center" src={waifuImg} alt="your waifu" onClick={openWaifuImgModal} /> */}
             </div>
             <div className="summon__instruction">
-              <p>Sorry for the inconvenience, our website not yet ready</p>
-              <p>You can join our <a href="https://t.me/waifugpt" style={{ color: '#fde98f', fontWeight: 700 }}>Telegram channel</a> to use our free service.</p>
+              <p>Sorry for the inconvenience, our website not yet ready. You can join our <a href="https://t.me/waifugpt" style={{ color: '#fde98f', fontWeight: 700 }}>Telegram channel</a> to use our free service.</p>
             </div>
             <div className="summon__prompt-block">
               <img src={promptHeader} alt="prompt header" />
@@ -94,7 +93,7 @@ export default function Summon() {
                   // rows={12}
                   disabled
                   value={promptText}
-                  style={{ minHeight: 70 }}
+                  style={{ minHeight: 30 }}
                 />
               </div>
             </div>
