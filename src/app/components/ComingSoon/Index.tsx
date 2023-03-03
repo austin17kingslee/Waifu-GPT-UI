@@ -82,7 +82,7 @@ export default function Summon() {
             </div>
             <div className="summon__instruction">
               <p>Sorry for the inconvenience, our website not yet ready</p>
-              <p>You can join our <a href="https://t.me/waifugpt" style={{ color: '#fde98f', fontWeight: 700 }}>Telegram channel</a> to using our free service.</p>
+              <p>You can join our <a href="https://t.me/waifugpt" style={{ color: '#fde98f', fontWeight: 700 }}>Telegram channel</a> to use our free service.</p>
             </div>
             <div className="summon__prompt-block">
               <img src={promptHeader} alt="prompt header" />
